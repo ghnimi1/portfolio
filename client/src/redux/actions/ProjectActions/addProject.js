@@ -5,7 +5,7 @@ export const addProject = (project) => {
     const options = { headers: { 'Content-Type': 'multipart/form-data' } }
     return dispatch => {
 
-        axios.post("/projects", project, options)
+        axios.post("https://portfoliohassenghnimi.herokuapp.com/projects", project, options)
             .then(res => {
                 let successMessage = res.data;
                 dispatch(addProjectSuccess(project, successMessage));

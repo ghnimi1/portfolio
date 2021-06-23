@@ -6,7 +6,7 @@ export const deleteProject = id => {
         headers: { Authorization: localStorage.getItem("token") },
     };
     return dispatch => {
-        axios.delete(`/projects/${id}`, options)
+        axios.delete(`https://portfoliohassenghnimi.herokuapp.com/projects/${id}`, options)
             .then(res => {
                 let successMessage = res.data;
                 dispatch(deleteProjectSuccess(id, successMessage));

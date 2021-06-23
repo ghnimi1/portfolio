@@ -6,7 +6,7 @@ export const deleteSkills = id => {
         headers: { Authorization: localStorage.getItem("token") },
     };
     return dispatch => {
-        axios.delete(`/skills/${id}`, options)
+        axios.delete(`https://portfoliohassenghnimi.herokuapp.com/skills/${id}`, options)
             .then(res => {
                 let successMessage = res.data;
                 dispatch(deleteSkillsSuccess(id, successMessage));

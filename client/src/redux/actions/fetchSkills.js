@@ -10,7 +10,7 @@ export const fetchSkills = () => {
     return dispatch => {
         dispatch(fetchSkillsStarted());
         axios
-            .get("/skills")
+            .get("https://portfoliohassenghnimi.herokuapp.com/skills")
             .then(res => {
                 let skills = res.data;
                 dispatch(fetchSkillsSuccess(skills));

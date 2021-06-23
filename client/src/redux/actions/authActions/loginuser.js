@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const loginUser = (user, history) => {
     return dispatch => {
-        axios.post(`/users/signin`, user)
+        axios.post(`https://portfoliohassenghnimi.herokuapp.com/users/signin`, user)
             .then(res => {
                 let token = localStorage.setItem('token', res.data.token);
                 dispatch(loginUserSuccess(user, token));

@@ -12,7 +12,7 @@ export const fetchProjects = () => {
     return dispatch => {
         dispatch(fetchProjectsStarted());
         axios
-            .get("/projects", options)
+            .get("https://portfoliohassenghnimi.herokuapp.com/projects", options)
             .then(res => {
                 let projects = res.data;
                 dispatch(fetchProjectsSuccess(projects));

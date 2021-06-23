@@ -6,7 +6,7 @@ export const updateSkills = (id, skill) => dispatch => {
         headers: { Authorization: localStorage.getItem("token") },
     };
     axios
-        .put(`/skills/${id}`, skill, options)
+        .put(`https://portfoliohassenghnimi.herokuapp.com/skills/${id}`, skill, options)
         .then(res => {
             let updatedSkills = res.data;
             let successMessage = res.data;

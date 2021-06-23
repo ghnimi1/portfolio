@@ -6,7 +6,7 @@ export const updateExperience = (id, experience) => dispatch => {
         headers: { Authorization: localStorage.getItem("token") },
     };
     axios
-        .put(`/experience/${id}`, experience, options)
+        .put(`https://portfoliohassenghnimi.herokuapp.com/experience/${id}`, experience, options)
         .then(res => {
             let updatedExperience = res.data;
             let successMessage = res.data;

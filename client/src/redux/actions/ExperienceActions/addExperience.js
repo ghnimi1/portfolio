@@ -6,7 +6,7 @@ export const addExperiences = (experience) => {
         headers: { Authorization: localStorage.getItem("token") },
     };
     return dispatch => {
-        axios.post(`/experience`, experience, options)
+        axios.post(`https://portfoliohassenghnimi.herokuapp.com/experience`, experience, options)
             .then(res => {
                 let successMessage = res.data;
                 dispatch(addExperienceSuccess(experience, successMessage));

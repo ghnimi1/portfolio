@@ -10,7 +10,7 @@ export const fetchExperience = () => {
     return dispatch => {
         dispatch(fetchExperienceStarted());
         axios
-            .get("/experience")
+            .get("https://portfoliohassenghnimi.herokuapp.com/experience")
             .then(res => {
                 let experiences = res.data;
                 dispatch(fetchExperienceSuccess(experiences));

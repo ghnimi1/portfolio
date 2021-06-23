@@ -5,7 +5,7 @@ export const updateProjects = (id, project) => dispatch => {
     const options = { headers: { 'Content-Type': 'multipart/form-data' } }
 
     axios
-        .put(`/projects/${id}`, project, options)
+        .put(`https://portfoliohassenghnimi.herokuapp.com/projects/${id}`, project, options)
         .then(res => {
             let updatedProjects = res.data;
             let successMessage = res.data;

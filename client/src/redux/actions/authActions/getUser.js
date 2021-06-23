@@ -6,7 +6,7 @@ export const getUser = () => {
         headers: { Authorization: localStorage.getItem("token") },
     };
     return dispatch => {
-        axios.get(`/users/currentuser`, options)
+        axios.get(`https://portfoliohassenghnimi.herokuapp.com/users/currentuser`, options)
             .then(res => {
                 let successMessage = res.data;
                 dispatch(getUserSuccess(successMessage));

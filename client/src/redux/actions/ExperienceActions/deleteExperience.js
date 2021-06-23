@@ -6,7 +6,7 @@ export const deleteExperience = id => {
         headers: { Authorization: localStorage.getItem("token") },
     };
     return dispatch => {
-        axios.delete(`/experience/${id}`, options)
+        axios.delete(`https://portfoliohassenghnimi.herokuapp.com/experience/${id}`, options)
             .then(res => {
                 let successMessage = res.data;
                 dispatch(deleteExperienceSuccess(id, successMessage));

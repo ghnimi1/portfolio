@@ -6,7 +6,7 @@ export const addSkills = (skill) => {
         headers: { Authorization: localStorage.getItem("token") },
     };
     return dispatch => {
-        axios.post(`/skills`, skill, options)
+        axios.post(`https://portfoliohassenghnimi.herokuapp.com/skills`, skill, options)
             .then(res => {
                 let successMessage = res.data;
                 dispatch(addSkillsSuccess(skill, successMessage));
