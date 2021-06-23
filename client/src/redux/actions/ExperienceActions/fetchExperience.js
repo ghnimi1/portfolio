@@ -6,13 +6,11 @@ import {
 import axios from "axios";
 
 export const fetchExperience = () => {
-    const options = {
-        headers: { Authorization: localStorage.getItem("token") },
-    };
+
     return dispatch => {
         dispatch(fetchExperienceStarted());
         axios
-            .get("/experience", options)
+            .get("/experience")
             .then(res => {
                 let experiences = res.data;
                 dispatch(fetchExperienceSuccess(experiences));

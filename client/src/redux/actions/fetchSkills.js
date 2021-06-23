@@ -6,13 +6,11 @@ import {
 import axios from "axios";
 
 export const fetchSkills = () => {
-    const options = {
-        headers: { Authorization: localStorage.getItem("token") },
-    };
+
     return dispatch => {
         dispatch(fetchSkillsStarted());
         axios
-            .get("/skills", options)
+            .get("/skills")
             .then(res => {
                 let skills = res.data;
                 dispatch(fetchSkillsSuccess(skills));
